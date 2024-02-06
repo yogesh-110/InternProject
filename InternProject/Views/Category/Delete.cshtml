@@ -1,0 +1,48 @@
+﻿@model Intern.Models.Category
+
+<form method="Post">
+    <div class="border p-3 mt-4">
+        <div class="row pd-4">
+            <h2 class="text-primary">Delete Category</h2>
+            <hr />
+        </div>
+        @*<div asp-validation-summary="All"></div>*@
+        <div>
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="CreatedBy"></label>
+            <input asp-for="CreatedBy" class="form-control" />
+            <span asp-validation-for="CreatedBy" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="CreatedDate"></label>
+            <input asp-for="CreatedDate" class="form-control" />
+            <span asp-validation-for="CreatedDate" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="ModifiedBy"></label>
+            <input asp-for="ModifiedBy" class="form-control" />
+            <span asp-validation-for="ModifiedBy" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="ModifiedDate"></label>
+            <input asp-for="ModifiedDate" class="form-control" />
+            <span asp-validation-for="ModifiedDate" class="text-danger"></span>
+        </div>
+
+        <br /> <br />
+        <button type="submit" class="btn btn-primary" style="width:150px">Delete</button>
+
+        <a asp-controller="Category" asp-action="Edit" class="btn btn-secondary" style="width:150px">
+            Back To Index
+        </a>
+    </div>
+</form>
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
